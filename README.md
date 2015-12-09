@@ -4,7 +4,7 @@
 
 ```bash
 git clone https://github.com/martindsouza/pres-gulp-loader.git
-
+cd pres-gulp-loader
 npm install
 ```
 
@@ -15,7 +15,7 @@ In `gulfile.js` they're a few options in the `config` object:
 Option  | Desc
 ------------- | -------------
 `port`  | Port to run the server on
-'notify'  | `true/false` shows the BrowserSync notifications
+`notify`  | `true/false` shows the BrowserSync notifications
 `openBrowser` | `true/false` open the browser when run
 `srcPath` | This is the full path to the folder you want to watch
 

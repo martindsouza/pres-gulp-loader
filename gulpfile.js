@@ -12,8 +12,7 @@ var config = {
   port : 3000,
   notify : true,
   openBrowser : false,
-  // srcPath : '/Users/giffy/Documents/GitHub/martindsouza/pres-template/'
-  srcPath : '/Users/giffy/Documents/GitHub/orclapex-yyc/temp/'
+  srcPath : '/Users/giffy/Documents/GitHub/orclapex-yyc/pres-2015dec10-apex-5-migration/'
 }
 
 //Vars
