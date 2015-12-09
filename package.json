@@ -1,0 +1,27 @@
+{
+  "name": "pres-template",
+  "author": "Martin D'Souza",
+  "version": "1.0.0",
+  "description": "Presentation Template",
+  "license":"MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/martindsouza/pres-template.git"
+  },
+  "scripts": {
+    "start": "gulp"
+  },
+  "bugs": {
+    "url": "https://github.com/martindsouza/pres-template/issues"
+  },
+  "devDependencies": {
+    "browser-sync": "2.10.x",
+    "del": "2.1.x",
+    "font-awesome": "*",
+    "gulp": "3.9.x",
+    "gulp-if":"2.0.x",
+    "gulp-load-plugins": "1.1.x",
+    "gulp-plumber": "1.0.x",
+    "run-sequence": "1.1.x"
+  }
+}
