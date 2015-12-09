@@ -3,7 +3,7 @@
 # Install
 
 ```bash
-git clone https://github.com/martindsouza/pres-template.git
+git clone https://github.com/martindsouza/pres-gulp-loader.git
 
 npm install
 ```
