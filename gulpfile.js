@@ -4,7 +4,6 @@ var
   del = require('del'),
   runSequence = require('run-sequence'),
   browserSync = require('browser-sync').create(),
-  // config = require('./config.json'),
   http = require('http'),
   https = require('https')
 
@@ -77,7 +76,7 @@ gulp.task('browser-sync', function() {
   browserSync.init({
     port: config.port,
     server: {
-      baseDir: ["dist"],
+      baseDir: [paths.dist],
       index: "index.html",
       routes: {
         "/Font-Awesome": "node_modules/font-awesome",
