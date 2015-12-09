@@ -8,7 +8,6 @@ var
   http = require('http'),
   https = require('https')
 
-// TODO mdsouza:
 var config = {
   port : 3000,
   notify : true,
