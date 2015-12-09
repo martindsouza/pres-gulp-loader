@@ -18,7 +18,13 @@ Open the browser to: [http://localhost:3000](http://localhost:3000). *Note: This
 
 ## gh-pages
 
-TODO section about this
+To auto-build the gh-pages (and host online), be sure all the changes are committed.
+
+```bash
+./scripts/gh-pages-rebase.sh
+```
+
+Then go to (change URL accordingly): [https://martindsouza.github.io/pres-template/](https://martindsouza.github.io/pres-template/)
 
 # Config
 
