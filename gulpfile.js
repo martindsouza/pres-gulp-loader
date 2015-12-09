@@ -6,11 +6,14 @@ var
   browserSync = require('browser-sync').create(),
   http = require('http'),
   https = require('https')
+;
 
 var config = {
   port : 3000,
   notify : true,
-  openBrowser : false
+  openBrowser : false,
+  // srcPath : '/Users/giffy/Documents/GitHub/martindsouza/pres-template/'
+  srcPath : '/Users/giffy/Documents/GitHub/orclapex-yyc/temp/'
 }
 
 //Vars
@@ -20,6 +23,7 @@ var
     dist: 'dist/',
     slides: 'slides/'
   },
+  // TODO mdsouza: delete
   assets = {
     js: 'js/',
     css: 'css/',
@@ -48,7 +52,7 @@ gulp.task('clean-dist', function() {
 gulp.task('slides', function() {
   browserSync.reload();
 
-  return gulp.src([paths.slides + files.all, '!*.*~']) // Ignore temp files created by Atom
+  return gulp.src([config.srcPath + paths.slides + files.all, '!*.*~']) // Ignore temp files created by Atom
     .pipe(gulp.dest(paths.dist + paths.slides));
 });
 
@@ -57,13 +61,13 @@ gulp.task('slides', function() {
 gulp.task('index', function() {
   browserSync.reload();
 
-  return gulp.src(files.index)
+  return gulp.src(config.srcPath + files.index)
     .pipe(gulp.dest(paths.dist));
 });
 
 // www
 gulp.task('www', function() {
-  return gulp.src(paths.www + files.all)
+  return gulp.src(config.srcPath + paths.www + files.all)
     .pipe(gulp.dest(paths.dist + paths.www))
     // .pipe(plugins.if(config.enableBrowsersync, browserSync.stream({match: files.css})));
     .pipe(browserSync.stream());
@@ -79,8 +83,8 @@ gulp.task('browser-sync', function() {
       baseDir: [paths.dist],
       index: "index.html",
       routes: {
-        "/Font-Awesome": "node_modules/font-awesome",
-        "/reveal.js" : "reveal.js"
+        "/Font-Awesome": config.srcPath + "node_modules/font-awesome",
+        "/reveal.js" : config.srcPath + "reveal.js"
       }
     },
     notify: config.notify,
@@ -90,9 +94,9 @@ gulp.task('browser-sync', function() {
 
 // Watch for changes and recompiles
 gulp.task('watch', function() {
-  gulp.watch(paths.slides + files.all, ['slides']);
-  gulp.watch(paths.www + files.all, ['www']);
-  gulp.watch(files.index, ['index']);
+  gulp.watch(config.srcPath + paths.slides + files.all, ['slides']);
+  gulp.watch(config.srcPath + paths.www + files.all, ['www']);
+  gulp.watch(config.srcPath + files.index, ['index']);
 });
 
 // Default task: builds your app
