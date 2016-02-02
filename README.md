@@ -34,7 +34,7 @@ Open the browser to: [http://localhost:3000](http://localhost:3000). *Note: This
 In the new presentation directory (should already be initialized with `git clone`):
 
 ```bash
-. ~/Documents/GitHub/martindsouza/pres-template/scripts/copy-template.sh
+~/Documents/GitHub/martindsouza/pres-gulp-loader/scripts/copy-template.sh
 ```
 
 ## gh-pages
